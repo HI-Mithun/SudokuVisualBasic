@@ -122,6 +122,7 @@ Partial Class Form1
         Label4 = New Label()
         Label5 = New Label()
         Timer1 = New Timer(components)
+        Button13 = New Button()
         SuspendLayout()
         ' 
         ' TextBox1
@@ -1063,9 +1064,9 @@ Partial Class Form1
         ' 
         ' Label1
         ' 
-        Label1.Location = New Point(533, 197)
+        Label1.Location = New Point(533, 242)
         Label1.Name = "Label1"
-        Label1.Size = New Size(112, 39)
+        Label1.Size = New Size(112, 44)
         Label1.TabIndex = 94
         Label1.Text = "Hearts"
         Label1.TextAlign = ContentAlignment.MiddleCenter
@@ -1080,7 +1081,7 @@ Partial Class Form1
         ' 
         ' Label3
         ' 
-        Label3.Location = New Point(533, 242)
+        Label3.Location = New Point(533, 291)
         Label3.Name = "Label3"
         Label3.Size = New Size(112, 44)
         Label3.TabIndex = 0
@@ -1108,11 +1109,21 @@ Partial Class Form1
         ' Timer1
         ' 
         ' 
+        ' Button13
+        ' 
+        Button13.Location = New Point(533, 197)
+        Button13.Name = "Button13"
+        Button13.Size = New Size(112, 42)
+        Button13.TabIndex = 98
+        Button13.Text = "Solution"
+        Button13.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1136, 722)
+        Controls.Add(Button13)
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
@@ -1315,5 +1326,6 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button13 As Button
 
 End Class

@@ -303,7 +303,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub ClickArray(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.Click, TextBox2.Click, TextBox3.Click, TextBox4.Click, TextBox5.Click, TextBox6.Click, TextBox7.Click, TextBox8.Click, TextBox9.Click, TextBox10.Click, TextBox11.Click, TextBox12.Click, TextBox13.Click, TextBox14.Click, TextBox15.Click, TextBox16.Click, TextBox17.Click, TextBox18.Click, TextBox19.Click, TextBox20.Click, TextBox21.Click, TextBox22.Click, TextBox23.Click, TextBox24.Click, TextBox25.Click, TextBox26.Click, TextBox27.Click, TextBox28.Click, TextBox29.Click, TextBox30.Click, TextBox31.Click, TextBox32.Click, TextBox33.Click, TextBox34.Click, TextBox35.Click, TextBox36.Click, TextBox37.Click, TextBox38.Click, TextBox39.Click, TextBox40.Click, TextBox41.Click, TextBox42.Click, TextBox43.Click, TextBox44.Click, TextBox45.Click, TextBox46.Click, TextBox47.Click, TextBox48.Click, TextBox49.Click, TextBox50.Click, TextBox51.Click, TextBox52.Click, TextBox53.Click, TextBox54.Click, TextBox55.Click, TextBox56.Click, TextBox57.Click, TextBox58.Click, TextBox59.Click, TextBox60.Click, TextBox61.Click, TextBox62.Click, TextBox63.Click, TextBox64.Click, TextBox65.Click, TextBox66.Click, TextBox67.Click, TextBox68.Click, TextBox69.Click, TextBox70.Click, TextBox71.Click, TextBox72.Click, TextBox73.Click, TextBox74.Click, TextBox75.Click, TextBox76.Click, TextBox77.Click, TextBox78.Click, TextBox79.Click, TextBox80.Click, TextBox81.Click
@@ -391,4 +391,19 @@ Public Class Form1
         Label3.Text = Life
     End Sub
 
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Dim Index As Integer
+        For Index = 1 To 81
+            SudokuArray(Index).Tag = Index
+            SudokuAnswer(Index) = Val(Answer.Substring(Index, 1))
+            SudokuDisplay(Index) = Val(Answer.Substring(Index, 1))
+            If SudokuDisplay(Index) <> 0 Then
+                SudokuArray(Index).Text = SudokuDisplay(Index).ToString
+                SudokuArray(Index).Font = New Font("Verdana", 10, FontStyle.Bold)
+                SudokuArray(Index).Enabled = False
+            Else
+                Blank += 1
+            End If
+        Next
+    End Sub
 End Class
